@@ -1,5 +1,7 @@
 @use 'variaveis'
 @use 'header'
+@use 'hero'
+@use 'examples'
   
 @font-face 
   font-family: avenir
@@ -16,12 +18,60 @@
   line-height: $fontSize + 10px
   color: variaveis.$mainTextColor
 
+@mixin title($fontSize: 40px)
+  @include text($fontSize)
+  color: variaveis.$mainTextColor
+
+.text--big
+  @include text(18px)
+
+  @media (max-width: 768px)
+    @include text(15px)
+
+.text
+  @include text
+
+  @media (max-width: 768px)
+    @include text(14px)
+
+.text--small
+  @include text(12px)
+
+  @media (max-width: 768px)
+    @include text(11px)
+  
+.link-text
+  @include text(18px)
+  color: variaveis.$secondaryTextColor
+  text-decoration: underline
+
+.title--big
+  @include title(44px)
+
+  @media (max-width: 768px)
+    @include title(26px)
+
+.title
+  @include title
+
+  @media (max-width: 768px)
+    @include title(24px)
+
+.title--small
+  @include title(28px)
+
+  @media (max-width: 768px)
+    @include title(22px)
+
 *
   margin: 0
   padding: 0
   box-sizing: border-box
   font-family: avenir, sans-serif
   list-style: none
+
+body
+  background-color: variaveis.$bodyBackgroundColor
 
 .button
   display: flex
@@ -33,12 +83,27 @@
   color: variaveis.$mainTextColor
   background-color: variaveis.$bodyBackgroundColor
   text-transform: uppercase
-  border: none
+  border: #fff solid 1px
   border-radius: 8px
   text-decoration: none
   padding: 8px
   letter-spacing: 1px
+  transition: all .3s ease
 
   &:hover
     background-color: lighten(variaveis.$bodyBackgroundColor, 10%)
-    transition: all .5s ease
+    transition: all .3s ease
+
+  &--secondary
+    background-color: variaveis.$secondaryButtonBackgroundColor
+    color: variaveis.$secondaryTextColor
+    border: variaveis.$secondaryTextColor solid 2px
+  
+  &--red
+    background-color: variaveis.$headerBackgroundColor
+
+    &:hover
+      background-color: lighten(variaveis.$headerBackgroundColor, 10%)
+      letter-spacing: 2px
+      font-size: 19px
+      transition: all .3s ease

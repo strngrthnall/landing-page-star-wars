@@ -8,22 +8,63 @@
   <link rel="stylesheet" href="./dist/css/main.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header header--is-hidden">
       <div class="header__container">
         <h1>
-          <img class="header__logo" src="./dist/images/empire-logo.png" alt="Império Galático">
+          <img class="header__logo" src="./dist/images/empire-logo-preto.png" alt="Império Galático">
         </h1>
         <ul class="header__links">
           <li class="header__links__item">
             <a href="#" class="button">Aliste-se</a>
-
           </li>
           <li class="header__links__item">
-            <a href="#" class="button">Denuncie a Resistência</a>
-
+            <a href="#" class="button button--secondary">Denuncie a Resistência</a>
           </li>
         </ul>
       </div>
     </header>
+
+    <section class="hero">
+      <div class="hero__content">
+        <div class="hero__content__branding">
+          <img src="./dist/images/empire-logo-branco.png" alt="Império Galático">
+        </div>
+        <h3 class="title--big hero__title">
+          O Império precisa de você!
+        </h3>
+        <button class="button button--red">Aliste-se agora</button>
+        <p class="text--small">
+          *O Império poderá te alocar em um planeta da orla exterior.
+        </p>
+      </div>
+    </section>
+
+    <section class="examples">
+      <nav class="examples__tabs">
+        <button data-tab-button="lideres" class="examples__tabs__button examples__tabs__button--is-active">
+          Lideres
+        </button>
+        <button data-tab-button="naves" class="examples__tabs__button">
+          Naves
+        </button>
+        <button data-tab-button="troopers" class="examples__tabs__button">
+          Troopers
+        </button>
+      </nav>
+
+      <ul class="examples__list examples__list--is-active">
+        <li class="examples__list__item">
+          <img src="./dist/images/exemples/darth-vader.jpg" alt="Darth Vader">
+        </li>
+        <li class="examples__list__item">
+          <img src="./dist/images/exemples/palpatine.jpg" alt="Sidious">
+        </li>
+        <li class="examples__list__item">
+          <img src="./dist/images/exemples/tarkin.webp" alt="Tarkin">
+        </li>
+      </ul>
+    </section>
+
+    <script src="./dist/js/main.js"></script>
 </body>
 </html>
