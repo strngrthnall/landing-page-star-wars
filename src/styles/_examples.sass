@@ -2,7 +2,8 @@
 
 .examples
   padding: 2vw 5.6vw
-  min-height: 50vw
+  margin-top: 128px 0 32px
+  border-bottom: 5px solid variaveis.$headerBackgroundColor
 
   &__list
     margin-top: 44px
@@ -11,19 +12,25 @@
     gap: 24px
 
     @media (max-width: 768px)
-      grid-template-columns: 1fr 1fr 
+      grid-template-columns: 1fr
 
     &--is-active
       display: grid
     
     &__item
       img
+        display: block
         max-width: 100%
-        max-height: 250px
+        min-width: 460px
+        max-height: 230px
         border: #fff solid 1px
         border-radius: 4px
+      
+        @media (max-width: 768px)
+          min-width: 333px
     
   &__tabs
+    margin-top: 60px
     display: flex
     justify-content: center
 
