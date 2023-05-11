@@ -2,6 +2,8 @@
 @use 'header'
 @use 'hero'
 @use 'examples'
+@use 'propaganda'
+@use 'footer'
   
 @font-face 
   font-family: avenir
@@ -21,6 +23,8 @@
 @mixin title($fontSize: 40px)
   @include text($fontSize)
   color: variaveis.$mainTextColor
+  text-decoration: underline
+  text-decoration-color: variaveis.$headerBackgroundColor
 
 .text--big
   @include text(18px)
